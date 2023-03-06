@@ -1,39 +1,65 @@
-GET http://localhost:3000/todos/
+GET http://localhost:3004/todos/?status=IN%20REGRESS
 ###
 
-GET http://localhost:3000/todos/?status=TO%20DO
+GET http://localhost:3004/todos/?priority=Balu
 ###
 
-GET http://localhost:3000/todos/?priority=HIGH
+GET http://localhost:3004/todos/?category=Boxing
 ###
 
-GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+GET http://localhost:3004/todos/?date=2021--04
 ###
 
-GET http://localhost:3000/todos/?search_q=Learn
+GET http://localhost:3004/todos/?status=TO%20DO
 ###
 
-GET http://localhost:3000/todos/1/
+GET http://localhost:3004/todos/?priority=HIGH
 ###
 
-POST http://localhost:3000/todos/
+GET http://localhost:3004/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+GET http://localhost:3004/todos/?search_q=Buy
+###
+
+GET http://localhost:3004/todos/?category=WORK&status=DONE
+###
+
+GET http://localhost:3004/todos/?category=HOME
+###
+
+GET http://localhost:3004/todos/?category=LEARNING&priority=HIGH
+###
+
+GET http://localhost:3004/agenda/?date=2021-4-2
+###
+
+GET http://localhost:3004/todos/
+###
+
+GET http://localhost:3004/todos/1/
+###
+
+POST http://localhost:3004/todos/
 Content-Type: application/json
 
 {
-  "id": 11,
-  "todo": "Learn Node Js",
-  "priority": "HIGH",
-  "status": "DONE"
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
 }
 ###
 
-PUT http://localhost:3000/todos/2/
+PUT http://localhost:3004/todos/6/
 Content-Type: application/json
 
 {
-    "priority": "LOW"
+      "dueDate": "2001-12-21"
 }
 ###
 
-DELETE http://localhost:3000/todos/11/
+DELETE http://localhost:3004/todos/6/
 ###
